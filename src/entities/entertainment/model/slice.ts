@@ -5,11 +5,11 @@ import {
     createSlice,
 } from "@reduxjs/toolkit"
 import { EntertainmentCard, EntertainmentCardSlice } from "./types"
-//import { url } from "../../../shared/api/baseApi"
+
 import { category } from "../api/types"
 import { RootState } from "../../../app/appStore"
 import data from "./../../../app/assets/lib/data.json"
-//import axios from "axios"
+
 
 const initialState: EntertainmentCardSlice = {
     loading: false,
@@ -20,9 +20,7 @@ const initialState: EntertainmentCardSlice = {
 export const fetchContent = createAsyncThunk(
     "entertainment/fetchContent",
     async () => {
-        //While server is in development
-        // const res = await axios.get(url)
-        // const data = await res.data
+       
         return data as EntertainmentCard[]
     }
 )

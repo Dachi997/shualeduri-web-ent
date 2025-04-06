@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react"
 import svgr from "vite-plugin-svgr"
 
 export default defineConfig({
-    base: '/',
+    base: './', 
     plugins: [
         react(),
         svgr({
@@ -11,4 +11,3 @@ export default defineConfig({
         }),
     ],
 })
-
